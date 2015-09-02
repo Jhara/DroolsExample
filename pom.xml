@@ -7,6 +7,8 @@
     <groupId>com.sura.drools.example</groupId>
     <artifactId>drools-example</artifactId>
     <version>0.0.1</version>
+    
+    <packaging>kjar</packaging>
 
     <dependencies>
         <dependency>
@@ -25,6 +27,17 @@
             <version>4.12</version>
         </dependency>
     </dependencies>
+    
+    <build>
+	 <plugins>
+		 <plugin>
+			 <groupId>org.kie</groupId>
+			 <artifactId>kie-maven-plugin</artifactId>
+			 <version>6.2.0.Final</version>
+			 <extensions>true</extensions>
+		 </plugin>
+	 </plugins>
+ 	</build> 
 
 
 </project>

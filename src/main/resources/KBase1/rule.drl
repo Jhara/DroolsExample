@@ -1,0 +1,11 @@
+//created on: 2/09/2015
+package com.jara.drools.example
+
+import com.jara.example.tipos.*
+
+rule "Your First Rule"
+    when
+        not(Tipo1() )
+    then
+        System.out.println("Hola, no existe un Tipo1 desde KBase1");
+end

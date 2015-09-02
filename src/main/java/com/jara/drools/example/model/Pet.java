@@ -18,8 +18,7 @@ public class Pet {
 
         this.name = name;
         this.position = position;
-        this.type = type;
-        System.out.println(name +"("+type.toString()+"): is "+position);
+        this.type = type;       
     }
 
 

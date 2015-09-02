@@ -1,0 +1,15 @@
+//created on: 2/09/2015
+package com.jara.example.tipos
+
+//list any import classes here.
+
+
+
+//declare any global variables here
+declare Tipo1
+	id: String
+end
+
+declare Tipo2
+	id: String
+end
