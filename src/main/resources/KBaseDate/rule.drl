@@ -7,6 +7,10 @@ declare Person
     dateOfBirth: Date
 end
 
+function Date currentTime(){
+    return new Date();
+}
+
 rule "init person"
     when
         not Person()
@@ -20,7 +24,7 @@ end
 
 rule "Date compare"
     when
-        Person( dateOfBirth > $date: new Date(System.currentTimeMillis()))
+        Person( dateOfBirth > $date: currentTime())
     then
         System.out.println("Date of birth after current time "+$date);
 end
