@@ -73,6 +73,16 @@ public class RuleTestTest {
         kieSession.fireAllRules();
         kieSession.dispose();    
     }
+
+    @Test
+    public void kbaseDateTest(){
+        KieServices kieServices = KieServices.Factory.get();
+        KieContainer kieContainer = kieServices.getKieClasspathContainer();
+        KieSession kieSession =  kieContainer.newKieSession("KBaseDate.session");
+        kieSession.fireAllRules();
+        kieSession.dispose();
+    }
+
     
 
 

@@ -7,4 +7,8 @@
     <kbase name="FirefigtherCatKBase" packages="FirefigtherCatKBase, tipos">
         <ksession name="FirefigtherCatKBase.session" type="stateful"/>
     </kbase>
+    <kbase name="KBaseDate" packages="KBaseDate">
+        <ksession name="KBaseDate.session" type="stateful"/>
+    </kbase>
+
 </kmodule>

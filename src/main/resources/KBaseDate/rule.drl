@@ -1,0 +1,26 @@
+package com.jara.drools.date
+
+import java.util.Date
+import java.text.SimpleDateFormat
+
+declare Person
+    dateOfBirth: Date
+end
+
+rule "init person"
+    when
+        not Person()
+    then
+        Person person = new Person();
+        SimpleDateFormat format = new SimpleDateFormat("YYYY-MMM-dd");
+        Date dateOfBirth = format.parse("2018-Jun-22");
+        person.setDateOfBirth(dateOfBirth);
+        insert(person);
+end
+
+rule "Date compare"
+    when
+        Person( dateOfBirth > $date: new Date(System.currentTimeMillis()))
+    then
+        System.out.println("Date of birth after current time "+$date);
+end
